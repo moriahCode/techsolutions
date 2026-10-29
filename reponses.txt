@@ -6,3 +6,4 @@ Fiche du serveur local
 - Dossier web htdocs : /opt/lampp/htdocs
 - Adresse de la page d'accueil : http://localhost/
 - Démarrage d'Apache et MySQL : sudo /opt/lampp/lampp start
+- Version de PHP : 8.2.12 
