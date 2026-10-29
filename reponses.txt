@@ -1,0 +1,8 @@
+Mise en route
+
+Fiche du serveur local
+- Système : Linux
+- Logiciel installé : XAMPP
+- Dossier web htdocs : /opt/lampp/htdocs
+- Adresse de la page d'accueil : http://localhost/
+- Démarrage d'Apache et MySQL : sudo /opt/lampp/lampp start
