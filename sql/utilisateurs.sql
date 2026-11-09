@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 09 nov. 2026 à 11:35
+-- Généré le : lun. 09 nov. 2026 à 16:19
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -45,8 +45,9 @@ INSERT INTO `utilisateurs` (`id`, `identifiant`, `mot_de_passe`, `prenom`, `nom`
 (1, 'mdurand', '$2y$10$8efjRCz/DQeIi.6TCqPPiO8crX84acHbKe5wGV3T7BUlzpMe9hxWW', 'Martin', 'Durand', 'Informatique', 'admin'),
 (2, 'jmoreau', '$2y$10$1IFUf30NlciWsBb8xFLg9.kTYUnMTqP0FaDi.KjUy7Y25CPXf8TuC', 'Julie', 'Moreau', 'Accueil', 'salarie'),
 (3, 'kbenali', '$2y$10$UO.SaAKfiqvt2W8mp1D/p.27S8WG8z3JwLhxp4nF5GenoAkGJdAgy', 'Karim', 'Benali', 'Comptabilité', 'salarie'),
-(4, 'lpetit', '$2y$10$NJIWyOzQtnhvcv2mGg5QSu8tHELE9eLAu3stQZsDG7snVsZa3H8ta', 'Lucas', 'Petit', 'Commercial', 'salarie'),
+(4, 'lpetit', '$2y$10$NJIWyOzQtnhvcv2mGg5QSu8tHELE9eLAu3stQZsDG7snVsZa3H8ta', 'Lucas', 'Petit', 'Technique', 'salarie'),
 (5, 'sgarcia', '$2y$10$wzb3foPXxWIwXVfeKFfoFe36ZfvudcSMGGCvWeXyNEF/p6zp7CVt2', 'Sofia', 'Garcia', 'Technique', 'salarie'),
+(6, 'tleroy', '$2y$10$DrqrZQW59A.pw1MjyXbUyOKy4Zrlu9ANcn0H8uIB52QHoVlaLxBI6', 'Thomas', 'Leroy', 'Technique', 'salarie'),
 (7, 'cfontaine', '$2y$10$70dy1amCh9Jiv9Vn7KkNbeDHqZvojxg.U1OYq2HqUPZUrHfuVcYYW', 'Camille', 'Fontaine', 'Commercial', 'salarie'),
 (8, 'nrousseau', '$2y$10$YhRrClnD4ZYuOtgkEwLCreoE/oGIbe6AFr58Q21flkw7Up8Nm2jBa', 'Nadia', 'Rousseau', 'Commercial', 'salarie');
 
