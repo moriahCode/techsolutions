@@ -114,3 +114,8 @@ button {
     color: #b03a2e;
     font-weight: bold;
 }
+
+.bouton-supprimer {
+    background-color: #b03a2e;
+    padding: 5px 12px;
+}

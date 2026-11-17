@@ -17,7 +17,7 @@ if ($_SESSION["role"] != "admin") {
 include "inc/infos.php";
 require "inc/bdd.php";
 
-$requete = $pdo->query("SELECT prenom, nom, service, role FROM utilisateurs ORDER BY nom");
+$requete = $pdo->query("SELECT id, prenom, nom, service, role FROM utilisateurs ORDER BY nom");
 $utilisateurs = $requete->fetchAll();
 ?>
 
@@ -41,23 +41,29 @@ $utilisateurs = $requete->fetchAll();
     <p>Nombre de comptes : <?php echo count($utilisateurs); ?></p>
 
     <table width="100%" border="1">
-        <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>Service</th>
-            <th>Rôle</th>
-        </tr>
+    <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Service</th>
+        <th>Rôle</th>
+        <th>Action</th>
+    </tr>
 
-        <?php foreach ($utilisateurs as $u) { ?>
-        <tr>
-            <td><?php echo $u["prenom"]; ?></td>
-            <td><?php echo $u["nom"]; ?></td>
-            <td><?php echo $u["service"]; ?></td>
-            <td><?php echo $u["role"]; ?></td>
-        </tr>
-        <?php } ?>
-
-    </table>
+    <?php foreach ($utilisateurs as $u) { ?>
+    <tr>
+        <td><?php echo $u["prenom"]; ?></td>
+        <td><?php echo $u["nom"]; ?></td>
+        <td><?php echo $u["service"]; ?></td>
+        <td><?php echo $u["role"]; ?></td>
+        <td>
+            <form action="supprimer.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $u["id"]; ?>">
+                <button type="submit" class="bouton-supprimer">Supprimer</button>
+            </form>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
 
     <p><a href="espace.php">Retour à mon espace</a></p>
 
