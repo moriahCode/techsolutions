@@ -6,15 +6,8 @@
     <title>Accueil - TechSolutions</title>
 </head>
 <body>
-    <ul class="menu">
-        <li><a href="Accueil.html" class="logo">TS | TechSolutions</a></li>
-        <li><a href="Accueil.html" class="actif">Accueil</a></li>
-        <li><a href="services.html">Nos services</a></li>
-        <li><a href="entreprise.html">L'entreprise</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li><a href="connexion.html">Connexion</a></li>
-    </ul>
 
+<?php include "inc/menu.php"; ?>    
     <h1>Des solutions simples, une informatique fiable.</h1>
     <p class="accent">Votre informatique entre de bonnes mains.</p>
     <p>TechSolutions accompagne les petites entreprises de Brive-la-Gaillarde dans la gestion de leur informatique.</p>
@@ -26,5 +19,6 @@
         <li>Maintenance et dépannage</li>
         <li>Sauvegarde et assistance informatique</li>
     </ul>
+    <?php include "inc/pied.php"; ?>
 </body>
 </html>

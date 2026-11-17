@@ -21,7 +21,7 @@ $equipe = $requete->fetchAll();
     <p class="accent">Une équipe locale, proche de ses clients.</p>
     <p>TechSolutions accompagne les petites entreprises de Brive-la-Gaillarde dans la gestion de leur informatique : installation, maintenance, sauvegarde et assistance.</p>
 
-    <h2>Pourquoi nous choisir ?</h2>
+    <h2>Nos équipes</h2>
     <ul>
     <?php foreach ($equipe as $salarie) { ?>
         <li>
@@ -30,5 +30,6 @@ $equipe = $requete->fetchAll();
     <?php } ?>
     </ul>
     <p><strong>TechSolutions - Brive-la-Gaillarde - 05 55 00 00 00</strong></p>
+    <?php include "inc/pied.php"; ?>
 </body>
 </html>

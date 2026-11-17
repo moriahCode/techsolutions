@@ -1,3 +1,11 @@
+<?php
+include "inc/infos.php";
+require "inc/bdd.php";
+
+$requete = $pdo->query("SELECT prenom, nom, service FROM utilisateurs ORDER BY nom");
+$equipe = $requete->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,15 +14,8 @@
     <title>Nos services - TechSolutions</title>
 </head>
 <body>
-    <ul class="menu">
-        <li><a href="Accueil.html" class="logo">TS | TechSolutions</a></li>
-        <li><a href="Accueil.html">Accueil</a></li>
-        <li><a href="services.html" class="actif">Nos services</a></li>
-        <li><a href="entreprise.html">L'entreprise</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li><a href="connexion.html">Connexion</a></li>
-    </ul>
 
+<?php include "inc/menu.php"; ?>
     <h1>Nos services</h1>
     <p class="accent">Tout ce que votre entreprise a besoin.</p>
 
@@ -33,9 +34,10 @@
 
         <tr>
 
-            <th width="30%" >Formule</th>
-            <th width="50"> Ce qui est compris </th>
+            <th width="20%" >Formule</th>
+            <th width="40"> Ce qui est compris </th>
             <th width="20%"> Tarif </th>
+            <th width="20%"> Tarif HT </th>
 
         </tr>
 
@@ -44,26 +46,27 @@
             <td> Essentiel </td>
             <td> intervention à la demande  </td>
             <td> 60 euros de l'heure </td>
+            <td> 72 euros de l'heure </td>
 
         </tr>
 
         <tr>
 
             <td> Sérenité </td>
-            <td> Maintenance et sauvegarde </td>
-            <td> 150 euros par mois </td>
-
+            <td> Accompagnement regulier </td>
+            <td><?php echo $serenite; ?> euros de l'heure </td>
+            <td><?php echo $serenite * (100 + $tva) / 100; ?> euros de l'heure </td>
+        
         </tr>
 
         <tr>
-
-            <td> Premium </td>
-            <td> Tout compris, assistance illimitée </td>
-            <td> 290 euros par mois </td>
-
-        </tr>
-
+    <td>Premium</td>
+    <td>Accompagnement complet</td>
+    <td><?php echo $premium; ?> euros de l'heure</td>
+    <td><?php echo $premium * (100 + $tva) / 100; ?> euros de l'heure</td>
+</tr>
     </table>
+<p>TVA au taux de <?php echo $tva; ?> %.</p>
 
 </body>
 </html>
