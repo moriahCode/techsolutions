@@ -83,3 +83,34 @@ th, td {
     font-size: 14px;
     color: #111110;
 }
+
+
+/* Formulaire de connexion */
+.formulaire {
+    background-color: white;
+    border: 1px solid #c5ccd3;
+    padding: 10px 20px;
+    max-width: 400px;
+}
+
+/* Champs du formulaire */
+input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #c5ccd3;
+}
+
+/* Bouton */
+button {
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Messages d'erreur */
+.erreur {
+    color: #b03a2e;
+    font-weight: bold;
+}

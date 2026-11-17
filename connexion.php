@@ -21,7 +21,7 @@ $equipe = $requete->fetchAll();
 
     <h1> Espace salariés </h1>
     <p class="accent">Connectez-vous avec votre identifiant </p>
-        <form action="verifier.php" method="get">
+        <form class="formulaire" action="verifier.php" method="post">
       <p>
         <label for="identifiant">Identifiant</label><br>
         <input type="text" id="identifiant" name="identifiant" required>
